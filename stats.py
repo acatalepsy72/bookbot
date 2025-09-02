@@ -15,7 +15,7 @@ def count_char(path):
             count[char] = 1
     return count
 
-def cat_list(dict):
+def categorize_list(dict):
     categorized_list = []
     #items() provides access to both keys and values of a dictionary
     # ex usage: for key, value in dict.items()

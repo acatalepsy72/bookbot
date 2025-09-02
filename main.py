@@ -1,5 +1,5 @@
-from stats import *
 import sys
+from stats import word_count, count_char, categorize_list, sort_helper
 
 arguments = sys.argv
 def main():
@@ -15,8 +15,8 @@ def main():
     path = sys.argv[1]
 
     #Data info
-    print("Script Name: " + script_name)
-    print("PATH: " + path)
+    print(f"Script Name: {script_name}")
+    print(f"PATH: {path}")
     #REPORT
     print("================ BOOKBOT ================")
     print(f"Analyzing book found at {path}...")
@@ -25,7 +25,7 @@ def main():
     print(f"Found {word_count(path)} total words")
 
     print("------------ Character Count ------------")
-    categorized = cat_list(count_char(path))
+    categorized = categorize_list(count_char(path))
     categorized.sort(reverse=True, key=sort_helper)
     #Accesses the value inside the "char" and "num" 
     for item in categorized:
