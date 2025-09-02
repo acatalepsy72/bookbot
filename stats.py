@@ -15,11 +15,11 @@ def count_char(path):
             count[char] = 1
     return count
 
-def categorize_list(dict):
+def categorize_list(dictionary_par):
     categorized_list = []
     #items() provides access to both keys and values of a dictionary
     # ex usage: for key, value in dict.items()
-    for char, count in dict.items():
+    for char, count in dictionary_par.items():
         dictionary = {}
         if char.isalpha():
             dictionary["char"] = char
